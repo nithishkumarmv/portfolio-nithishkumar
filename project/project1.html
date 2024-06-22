@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nithishkumar MV Portfolio</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="projectstyle.css">
+    <link rel="stylesheet" href="../css/projectstyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
@@ -25,22 +25,34 @@
             </ul>
         </div>
     </nav>
+
+    <!--Project title-->
+    <section id="title" class="container mt-5 mb-5 animate__animated animate__fadeInLeft">
+        <a href="../project/project1.html"><h1>Project_name</h1></a>
+    </section>
+
     <!-- Language USed Section -->
-    <section id="language" class="container mt-5 mb-5 animate__animated animate__zoomInDown">
-        <div class="languageused">
+    <section id="language" class="container mt-5 mb-5 animate__animated animate__fadeInRight">
+        <div class="row languageused">
             <div class="col-md-4">
-                <strong>Front-end:</strong><p>EJS(Embedded Javascript)</p>
+                <div class="project-card">
+                    <strong>Front-end:</strong><p>EJS(Embedded Javascript)</p>
+                </div>            
             </div>
             <div class="col-md-4">
-                <strong>Back-end:</strong><p>EJS(Embedded Javascript)</p>
+                <div class="project-card">
+                    <strong>Back-end:</strong><p>EJS(Embedded Javascript)</p>
+                </div>            
             </div>
             <div class="col-md-4">
-                <strong>Database:</strong><p>MYSQL</p>
+                <div class="project-card">
+                    <strong>Database:</strong><p>EJS(Embedded Javascript)</p>
+                </div>            
             </div>
         </div>
     </section>
     <!-- Description Section -->
-    <section id="description" class="container mt-5 mb-5 animate__animated animate__zoomInDown">
+    <section id="description" class="container mt-5 mb-5 animate__animated animate__fadeIn">
         <h2>Description</h2>
         <p>A bike rental system typically consists of a network of rental stations where customers can rent bicycles for short periods of time, usually for a few hours or a day. These systems are popular in urban areas and tourist destinations as a convenient and eco-friendly transportation option. Here's a detailed description of a typical bike rental system:
             Rental Stations: There are multiple rental stations strategically located throughout the city or area of operation. Each station has a designated number of bicycles available for rent.
@@ -56,11 +68,12 @@
             
             </p>
     </section>
+
     <!--Image layout section-->
     <div class="container mt-5 animate__animated animate__zoomInDown">
         <div class="row">
             <div class="col-md-4 mb-4">
-                <div class="gallery-item">
+                <div class="gallery-item ">
                     <img src="../images/main images/alumni.png" alt="Image 1" class="img-fluid zoom-img">
                 </div>
             </div>
