@@ -191,7 +191,7 @@ box-shadow: 0 0 10px #00abf0; /* Optional: Add a subtle shadow effect */
   }
   
   .project-card h3 {
-    color: #000000;
+    color: #dedede !important;
     font-weight: bold;
 }
 
