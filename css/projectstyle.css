@@ -86,7 +86,7 @@ color: #dedede;
 
 /*style for description section*/
 
-#description h2 {
+#description h2 ,#Gallery h2{
   font-size: 2.5rem; /* Adjust the font size as needed */
   font-weight: bold; /* Make the title bold */
   color: #00abf0;
