@@ -1,43 +1,33 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const skillBars = document.querySelectorAll('.skill');
-    const interestBars = document.querySelectorAll('.interest');
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill');
+            const interestBars = document.querySelectorAll('.interest');
 
-    function addHoverAnimation(barElements) {
-        barElements.forEach(bar => {
-            const barFill = bar.querySelector('.bar-fill');
-            const percentage = bar.getAttribute('data-percentage');
-            const percentageText = barFill.querySelector('span');
+            function setStaticFill(barElements) {
+                barElements.forEach(bar => {
+                    const barFill = bar.querySelector('.bar-fill');
+                    const percentage = bar.getAttribute('data-percentage');
+                    const percentageText = barFill.querySelector('span');
 
-            bar.addEventListener('mouseover', () => {
-                if (window.matchMedia("(hover: hover)").matches) {
-                    barFill.style.width = percentage;
-                    percentageText.style.display = 'inline';
-                }
-            });
+                    if (window.matchMedia("(hover: none)").matches) {
+                        barFill.style.width = percentage;
+                        percentageText.style.display = 'inline';
+                    } else {
+                        bar.addEventListener('mouseover', () => {
+                            barFill.style.width = percentage;
+                            percentageText.style.display = 'inline';
+                        });
 
-            bar.addEventListener('mouseout', () => {
-                if (window.matchMedia("(hover: hover)").matches) {
-                    barFill.style.width = '0';
-                    percentageText.style.display = 'none';
-                }
-            });
+                        bar.addEventListener('mouseout', () => {
+                            barFill.style.width = '0';
+                            percentageText.style.display = 'none';
+                        });
+                    }
+                });
+            }
 
-            bar.addEventListener('touchstart', () => {
-                barFill.style.width = percentage;
-                percentageText.style.display = 'inline';
-            });
-
-            // Prevent resetting the width on touchend for mobile/tablet
-            bar.addEventListener('touchend', () => {
-                percentageText.style.display = 'inline';
-            });
+            setStaticFill(skillBars);
+            setStaticFill(interestBars);
         });
-    }
-
-    addHoverAnimation(skillBars);
-    addHoverAnimation(interestBars);
-});
-
 function downloadPDF() {
     const link = document.createElement('a');
     link.href = 'resume/nithish_resume.pdf'; // Replace with the actual path to your PDF file
