@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 percentageText.style.display = 'inline';
             });
 
+            // Prevent resetting the width on touchend for mobile/tablet
             bar.addEventListener('touchend', () => {
-                barFill.style.width = '0';
-                percentageText.style.display = 'none';
+                percentageText.style.display = 'inline';
             });
         });
     }
