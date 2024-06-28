@@ -48,9 +48,10 @@ body{
 }
 /*style for title section*/
 
-#title h1{
+#title,#titles{
   color: #dedede!important;
   align-items: center;
+  display: grid;
 }
 
 #title h1:hover{
