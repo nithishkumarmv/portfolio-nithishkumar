@@ -9,13 +9,27 @@ document.addEventListener('DOMContentLoaded', function() {
             const percentageText = barFill.querySelector('span');
 
             bar.addEventListener('mouseover', () => {
-                barFill.style.width = percentage; // Ensure width is set to percentage on hover
-                percentageText.style.display = 'inline'; // Show percentage text on hover
+                if (window.matchMedia("(hover: hover)").matches) {
+                    barFill.style.width = percentage;
+                    percentageText.style.display = 'inline';
+                }
             });
 
             bar.addEventListener('mouseout', () => {
-                barFill.style.width = '0'; // Reset to zero on mouse out
-                percentageText.style.display = 'none'; // Hide percentage text on mouse out
+                if (window.matchMedia("(hover: hover)").matches) {
+                    barFill.style.width = '0';
+                    percentageText.style.display = 'none';
+                }
+            });
+
+            bar.addEventListener('touchstart', () => {
+                barFill.style.width = percentage;
+                percentageText.style.display = 'inline';
+            });
+
+            bar.addEventListener('touchend', () => {
+                barFill.style.width = '0';
+                percentageText.style.display = 'none';
             });
         });
     }
@@ -23,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     addHoverAnimation(skillBars);
     addHoverAnimation(interestBars);
 });
-
 
 function downloadPDF() {
     const link = document.createElement('a');
