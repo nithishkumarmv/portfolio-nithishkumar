@@ -15,6 +15,9 @@
 body{
   background-color: #081b29!important;  
 }
+body a {
+  color: #00abf0!important;
+}
 /*style for navbar section*/
 .navbar {
   background-color: transparent!important;
