@@ -62,6 +62,10 @@ body{
 #title a {
   text-decoration: none;
 }
+
+#description a{
+  color: #00abf0;
+}
 /*style for language section*/
 
 .project-card {
