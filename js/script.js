@@ -31,7 +31,7 @@
 function downloadPDF() {
     const link = document.createElement('a');
     link.href = 'resume/nithish_resume.pdf'; // Replace with the actual path to your PDF file
-    link.download = 'nithish_resume.pdf'; // Replace with the desired file name
+    link.download = 'NITHISHKUMAR_RESUME.pdf'; // Replace with the desired file name
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
